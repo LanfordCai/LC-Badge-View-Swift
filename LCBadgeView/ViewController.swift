@@ -26,14 +26,14 @@ class ViewController: UIViewController {
         badgeView.text = "1"
         testView.addSubview(badgeView)
 
-        badgeView.font = UIFont.systemFontOfSize(15)
-        badgeView.shiftDirection = .Left
-        badgeView.textColor = UIColor.whiteColor()
-        badgeView.badgeBackgroundColor = UIColor.redColor()
-        badgeView.borderColor = UIColor.whiteColor()
-        badgeView.maxCharsCount = 2
-        badgeView.borderWidth = 0.0
-        badgeView.paddingFactor = 0.5
+        badgeView.font = UIFont.systemFontOfSize(15) // Default fontSize is 14
+        badgeView.shiftDirection = .Left // Default shiftDirection is left
+        badgeView.textColor = UIColor.whiteColor() // Default textColor is white
+        badgeView.badgeBackgroundColor = UIColor.redColor() // Default badgeBackgroundColor is red
+        badgeView.borderColor = UIColor.whiteColor() // Default borderColor is black
+        badgeView.maxCharsCount = 2 // Default maxCharsCount is 2
+        badgeView.borderWidth = 0.0 // Default borderWidth is 0.0
+        badgeView.paddingFactor = 0.5 // Default paddingFactor is 0.4
     }
 
     override func didReceiveMemoryWarning() {
