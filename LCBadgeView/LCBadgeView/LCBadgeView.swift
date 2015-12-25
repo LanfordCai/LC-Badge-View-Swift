@@ -8,13 +8,19 @@
 
 import UIKit
 
-
 class LCBadgeView: UIView {
 
     enum BadgeShiftDirectionType {
         case Left
         case Justify
         case Right
+    }
+
+    // The badgeView's shift direction while text in it changed
+    var shiftDirection: BadgeShiftDirectionType = .Left {
+        didSet {
+            setupBadgeFrame()
+        }
     }
 
     var text: String? {
@@ -43,6 +49,7 @@ class LCBadgeView: UIView {
         }
     }
 
+    // The padding between text and border of badgeView is fontSize * paddingFactor
     var paddingFactor: CGFloat = 0.4 {
         didSet {
             setupBadgeFrame()
@@ -56,8 +63,6 @@ class LCBadgeView: UIView {
             borderLayer?.path = badgePath!.CGPath
         }
     }
-
-    var shiftDirection: BadgeShiftDirectionType = .Left
 
     var badgeBackgroundColor: UIColor = UIColor.redColor() {
         didSet {
@@ -77,12 +82,13 @@ class LCBadgeView: UIView {
         }
     }
 
-    var hideWhenZero = true
     var maxWidth: CGFloat = CGFloat(FLT_MAX) {
         didSet {
             setupBadgeFrame()
         }
     }
+
+    var hideWhenZero = true
 
     private var textLayer: CATextLayer?
     private var backgroundLayer: CAShapeLayer?
@@ -94,10 +100,14 @@ class LCBadgeView: UIView {
     private var anchorLeftX: CGFloat?
     private var anchorMiddleX: CGFloat?
     private var anchorRightX: CGFloat?
-    private var defaultFontLineHeight: CGFloat = 17.0
 
 
     // MARK: Life-Cycle Methods
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        configurations()
+    }
 
     init(frame: CGRect, shiftDirection: BadgeShiftDirectionType, cornerRadius: CGFloat) {
         self.shiftDirection = shiftDirection
@@ -171,15 +181,13 @@ class LCBadgeView: UIView {
         case .Justify:
             tempFrame.origin.x = anchorMiddleX! - tempFrame.size.width * 0.5
         case .Right:
-            break
+            tempFrame.origin.x = anchorLeftX!
         }
 
         frame = tempFrame
 
-
         let textFrame = CGRect(x: 0, y: (bounds.height - font.lineHeight) * 0.5, width: bounds.width, height: font.lineHeight)
         textLayer?.frame = textFrame
-
 
         badgePath = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius ?? bounds.height * 0.5)
         backgroundLayer?.frame = bounds

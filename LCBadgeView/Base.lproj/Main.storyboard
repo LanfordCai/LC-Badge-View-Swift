@@ -167,7 +167,7 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="200" minValue="50" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="TJp-at-22z">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="300" minValue="50" maxValue="300" translatesAutoresizingMaskIntoConstraints="NO" id="TJp-at-22z">
                                         <rect key="frame" x="215" y="275" width="154" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="bqA-za-EX0"/>
@@ -215,7 +215,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.97716596696767677" green="0.97716596696767677" blue="0.97716596696767677" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="tea-EN-JGm" firstAttribute="leading" secondItem="hZi-LE-JnD" secondAttribute="leading" id="0EL-HQ-bpZ"/>
                                     <constraint firstItem="tea-EN-JGm" firstAttribute="leading" secondItem="kLB-qk-R0Y" secondAttribute="leading" id="1u6-jC-BIH"/>
