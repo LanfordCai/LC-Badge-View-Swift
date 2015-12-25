@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         badgeView.textColor = UIColor.whiteColor()
         badgeView.badgeBackgroundColor = UIColor.redColor()
         badgeView.borderColor = UIColor.whiteColor()
-        badgeView.maxCharsCount = 3
+        badgeView.maxCharsCount = 2
         badgeView.borderWidth = 0.0
         badgeView.paddingFactor = 0.5
     }
@@ -106,8 +106,8 @@ class ViewController: UIViewController {
         badgeView.hideWhenZero = sender.on
     }
 
-    @IBAction func maxWidthChanged(sender: UISlider) {
-        badgeView.maxCharsCount = Int(sender.value)
+    @IBAction func maxCharsCountChanged(sender: UISegmentedControl) {
+        badgeView.maxCharsCount = Int(sender.titleForSegmentAtIndex(sender.selectedSegmentIndex)!)!
     }
 
     @IBAction func borderWidthChanged(sender: UISegmentedControl) {
