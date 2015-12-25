@@ -12,6 +12,7 @@
 		3F99F8881C2C1AB100A74844 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F99F8861C2C1AB100A74844 /* Main.storyboard */; };
 		3F99F88A1C2C1AB100A74844 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F99F8891C2C1AB100A74844 /* Assets.xcassets */; };
 		3F99F88D1C2C1AB100A74844 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F99F88B1C2C1AB100A74844 /* LaunchScreen.storyboard */; };
+		3F99F8961C2C1B3700A74844 /* LCBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F99F8951C2C1B3700A74844 /* LCBadgeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		3F99F8891C2C1AB100A74844 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F99F88C1C2C1AB100A74844 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F99F88E1C2C1AB100A74844 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F99F8951C2C1B3700A74844 /* LCBadgeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LCBadgeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +56,21 @@
 		3F99F8811C2C1AB100A74844 /* LCBadgeView */ = {
 			isa = PBXGroup;
 			children = (
+				3F99F8941C2C1AE100A74844 /* LCBadgeView */,
 				3F99F8821C2C1AB100A74844 /* AppDelegate.swift */,
 				3F99F8841C2C1AB100A74844 /* ViewController.swift */,
 				3F99F8861C2C1AB100A74844 /* Main.storyboard */,
 				3F99F8891C2C1AB100A74844 /* Assets.xcassets */,
 				3F99F88B1C2C1AB100A74844 /* LaunchScreen.storyboard */,
 				3F99F88E1C2C1AB100A74844 /* Info.plist */,
+			);
+			path = LCBadgeView;
+			sourceTree = "<group>";
+		};
+		3F99F8941C2C1AE100A74844 /* LCBadgeView */ = {
+			isa = PBXGroup;
+			children = (
+				3F99F8951C2C1B3700A74844 /* LCBadgeView.swift */,
 			);
 			path = LCBadgeView;
 			sourceTree = "<group>";
@@ -136,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F99F8851C2C1AB100A74844 /* ViewController.swift in Sources */,
+				3F99F8961C2C1B3700A74844 /* LCBadgeView.swift in Sources */,
 				3F99F8831C2C1AB100A74844 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
