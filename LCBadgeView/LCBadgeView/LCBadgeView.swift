@@ -23,6 +23,39 @@ class LCBadgeView: UIView {
         }
     }
 
+    enum BadgeTextOverflowType {
+        case N, Points, Nines, NinesPlus
+
+        func overflowTag(charCount: Int) -> String {
+            switch self {
+            case N:
+                return "N"
+            case Points:
+                return "..."
+            case Nines:
+                var nines = ""
+                for _ in 1..<charCount {
+                    nines += "9"
+                }
+                return nines
+            case NinesPlus:
+                var ninesPlus = ""
+                for _ in 1..<charCount {
+                    ninesPlus += "9"
+                }
+                ninesPlus += "+"
+                return ninesPlus
+            }
+        }
+    }
+
+    var overflowType: BadgeTextOverflowType = .NinesPlus {
+        didSet {
+            setupBadgeFrame()
+        }
+    }
+
+    var oldText: String?
     var text: String? {
         didSet {
             textLayer?.string = text
@@ -82,11 +115,7 @@ class LCBadgeView: UIView {
         }
     }
 
-    var maxWidth: CGFloat = CGFloat(FLT_MAX) {
-        didSet {
-            setupBadgeFrame()
-        }
-    }
+    var maxCharsCount: Int = 2
 
     var hideWhenZero = true
 
@@ -123,7 +152,7 @@ class LCBadgeView: UIView {
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        print("layoutSubviews")
+
         setupBadgeFrame()
     }
 
@@ -131,6 +160,7 @@ class LCBadgeView: UIView {
     // MARK: Private Methods
 
     private func configurations() {
+
         backgroundColor = UIColor.clearColor()
         userInteractionEnabled = false
         clipsToBounds = false
@@ -164,16 +194,13 @@ class LCBadgeView: UIView {
 
         minWidth = bounds.height != 0 ? bounds.height : 24.0
 
+        if text?.characters.count > maxCharsCount {
+            text = overflowType.overflowTag((text?.characters.count)!)
+        }
+
         var tempFrame = frame
         let textWidth = sizeForText(text).width
-
-        if textWidth < minWidth {
-            tempFrame.size.width = minWidth
-        } else if textWidth > maxWidth {
-            tempFrame.size.width = maxWidth
-        } else {
-            tempFrame.size.width = textWidth
-        }
+        tempFrame.size.width = textWidth < minWidth ? minWidth : textWidth
 
         switch shiftDirection {
         case .Left:

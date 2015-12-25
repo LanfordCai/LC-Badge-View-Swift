@@ -15,6 +15,9 @@ class ViewController: UIViewController {
 
     var badgeView: LCBadgeView!
 
+
+    // MARK: Life-Cycle Methods
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,17 +31,18 @@ class ViewController: UIViewController {
         badgeView.textColor = UIColor.whiteColor()
         badgeView.badgeBackgroundColor = UIColor.redColor()
         badgeView.borderColor = UIColor.whiteColor()
+        badgeView.maxCharsCount = 3
         badgeView.borderWidth = 0.0
-        badgeView.maxWidth = 100.0
         badgeView.paddingFactor = 0.5
-
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 
-    // MARK: Font 有问题
+
+    // MARK: Actions
+
     @IBAction func fontChanged(sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
@@ -103,7 +107,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func maxWidthChanged(sender: UISlider) {
-        badgeView.maxWidth = CGFloat(sender.value)
+        badgeView.maxCharsCount = Int(sender.value)
     }
 
     @IBAction func borderWidthChanged(sender: UISegmentedControl) {
@@ -120,7 +124,6 @@ class ViewController: UIViewController {
     @IBAction func paddingFactorChanged(sender: UISlider) {
         badgeView.paddingFactor = CGFloat(sender.value + 0.5)
     }
-
 }
 
 extension ViewController: UITextFieldDelegate {
@@ -128,10 +131,6 @@ extension ViewController: UITextFieldDelegate {
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         badgeView.text = textField.text
         return true
-    }
-
-    func textFieldDidBeginEditing(textField: UITextField) {
-        print("text \(textField.text)")
     }
 }
 

@@ -167,7 +167,7 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="300" minValue="50" maxValue="300" translatesAutoresizingMaskIntoConstraints="NO" id="TJp-at-22z">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="2" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="TJp-at-22z">
                                         <rect key="frame" x="215" y="275" width="154" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="bqA-za-EX0"/>
