@@ -55,7 +55,6 @@ class LCBadgeView: UIView {
         }
     }
 
-    var oldText: String?
     var text: String? {
         didSet {
             textLayer?.string = text

@@ -34,6 +34,7 @@ class ViewController: UIViewController {
         badgeView.maxCharsCount = 2 // Default maxCharsCount is 2
         badgeView.borderWidth = 0.0 // Default borderWidth is 0.0
         badgeView.paddingFactor = 0.5 // Default paddingFactor is 0.4
+        badgeView.overflowType = .N // Default overflowType is NinesPlus
     }
 
     override func didReceiveMemoryWarning() {
@@ -123,6 +124,19 @@ class ViewController: UIViewController {
 
     @IBAction func paddingFactorChanged(sender: UISlider) {
         badgeView.paddingFactor = CGFloat(sender.value + 0.5)
+    }
+
+    @IBAction func overflowTypeChanged(sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            badgeView.overflowType = .N
+        case 1:
+            badgeView.overflowType = .Points
+        case 2:
+            badgeView.overflowType = .Nines
+        default:
+            badgeView.overflowType = .NinesPlus
+        }
     }
 }
 
