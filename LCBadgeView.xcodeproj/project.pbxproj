@@ -7,16 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F18157C1C2F0B710042F23A /* LCBadgeView.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F18157B1C2F0B710042F23A /* LCBadgeView.png */; };
 		3F99F8831C2C1AB100A74844 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F99F8821C2C1AB100A74844 /* AppDelegate.swift */; };
 		3F99F8851C2C1AB100A74844 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F99F8841C2C1AB100A74844 /* ViewController.swift */; };
 		3F99F8881C2C1AB100A74844 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F99F8861C2C1AB100A74844 /* Main.storyboard */; };
 		3F99F88A1C2C1AB100A74844 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F99F8891C2C1AB100A74844 /* Assets.xcassets */; };
 		3F99F88D1C2C1AB100A74844 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F99F88B1C2C1AB100A74844 /* LaunchScreen.storyboard */; };
 		3F99F8961C2C1B3700A74844 /* LCBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F99F8951C2C1B3700A74844 /* LCBadgeView.swift */; };
-		3FCBCACD1C2D951E00474B64 /* LCBadgeView.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FCBCACC1C2D951E00474B64 /* LCBadgeView.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F18157B1C2F0B710042F23A /* LCBadgeView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LCBadgeView.png; sourceTree = "<group>"; };
 		3F99F87F1C2C1AB100A74844 /* LCBadgeView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LCBadgeView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F99F8821C2C1AB100A74844 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F99F8841C2C1AB100A74844 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -25,7 +26,6 @@
 		3F99F88C1C2C1AB100A74844 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F99F88E1C2C1AB100A74844 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F99F8951C2C1B3700A74844 /* LCBadgeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LCBadgeView.swift; sourceTree = "<group>"; };
-		3FCBCACC1C2D951E00474B64 /* LCBadgeView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LCBadgeView.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +61,7 @@
 				3F99F8941C2C1AE100A74844 /* LCBadgeView */,
 				3F99F8821C2C1AB100A74844 /* AppDelegate.swift */,
 				3F99F8841C2C1AB100A74844 /* ViewController.swift */,
-				3FCBCACC1C2D951E00474B64 /* LCBadgeView.png */,
+				3F18157B1C2F0B710042F23A /* LCBadgeView.png */,
 				3F99F8861C2C1AB100A74844 /* Main.storyboard */,
 				3F99F8891C2C1AB100A74844 /* Assets.xcassets */,
 				3F99F88B1C2C1AB100A74844 /* LaunchScreen.storyboard */,
@@ -139,7 +139,7 @@
 				3F99F88D1C2C1AB100A74844 /* LaunchScreen.storyboard in Resources */,
 				3F99F88A1C2C1AB100A74844 /* Assets.xcassets in Resources */,
 				3F99F8881C2C1AB100A74844 /* Main.storyboard in Resources */,
-				3FCBCACD1C2D951E00474B64 /* LCBadgeView.png in Resources */,
+				3F18157C1C2F0B710042F23A /* LCBadgeView.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
