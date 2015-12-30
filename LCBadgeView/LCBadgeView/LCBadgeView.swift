@@ -170,15 +170,18 @@ class LCBadgeView: UIView {
         textLayer?.font = font.fontName
         textLayer?.fontSize = font.pointSize ?? 14.0
         textLayer?.alignmentMode = kCAAlignmentCenter
+        textLayer?.contentsScale = UIScreen.mainScreen().scale
 
         // Create backgroundLayer
         backgroundLayer = CAShapeLayer()
+        backgroundLayer?.contentsScale = UIScreen.mainScreen().scale
 
         // Create boarderLyaer 
         borderLayer = CAShapeLayer()
         borderLayer?.strokeColor = borderColor.CGColor
         borderLayer?.fillColor = UIColor.clearColor().CGColor
         borderLayer?.lineWidth = borderWidth
+        borderLayer?.contentsScale = UIScreen.mainScreen().scale
 
         layer.addSublayer(backgroundLayer!)
         layer.addSublayer(borderLayer!)
