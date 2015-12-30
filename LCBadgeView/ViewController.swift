@@ -44,6 +44,11 @@ class ViewController: UIViewController {
 
     // MARK: Actions
 
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        super.touchesBegan(touches, withEvent: event)
+        textField.resignFirstResponder()
+    }
+
     @IBAction func fontChanged(sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:

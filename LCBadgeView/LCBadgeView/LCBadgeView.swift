@@ -34,13 +34,13 @@ class LCBadgeView: UIView {
                 return "..."
             case Nines:
                 var nines = ""
-                for _ in 1..<charCount {
+                for _ in 0..<charCount {
                     nines += "9"
                 }
                 return nines
             case NinesPlus:
                 var ninesPlus = ""
-                for _ in 1..<charCount {
+                for _ in 0..<charCount {
                     ninesPlus += "9"
                 }
                 ninesPlus += "+"
@@ -197,7 +197,7 @@ class LCBadgeView: UIView {
         minWidth = bounds.height != 0 ? bounds.height : 24.0
 
         if text?.characters.count > maxCharsCount {
-            text = overflowType.overflowTag((text?.characters.count)!)
+            text = overflowType.overflowTag(maxCharsCount)
         }
 
         var tempFrame = frame
